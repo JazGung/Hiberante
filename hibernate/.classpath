@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src/main/java"/>
+	<classpathentry kind="src" path="src/main/res"/>
+	<classpathentry kind="src" path="src/test/java"/>
+	<classpathentry kind="src" path="src/test/res"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="var" path="LIBRARIES/hibernate-distribution-3.6.0.Final/hibernate3.jar" sourcepath="/LIBRARIES/hibernate-distribution-3.6.0.Final/project/core/src/main/java"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry kind="var" path="LIBRARIES/hibernate-jpa-2.0-api-1.0.0.Final/hibernate-jpa-2.0-api-1.0.0.Final.jar" sourcepath="/LIBRARIES/hibernate-distribution-3.6.0.Final/lib/jpa/hibernate-jpa-2.0-api-1.0.0.Final-sources.jar"/>
+	<classpathentry kind="var" path="LIBRARIES/dom4j-1.6.1/dom4j-1.6.1.jar" sourcepath="/LIBRARIES/dom4j-1.6.1/src/java"/>
+	<classpathentry kind="var" path="LIBRARIES/slf4j-1.5.6/slf4j-api-1.5.6.jar" sourcepath="/LIBRARIES/slf4j-1.5.6/slf4j-api-1.5.6-sources.jar"/>
+	<classpathentry kind="var" path="LIBRARIES/slf4j-1.5.6/slf4j-nop-1.5.6.jar" sourcepath="/LIBRARIES/slf4j-1.5.6/slf4j-simple-1.5.6-sources.jar"/>
+	<classpathentry kind="var" path="LIBRARIES/jdbc/mysql-connector-java-5.1.14/mysql-connector-java-5.1.14-bin.jar" sourcepath="/LIBRARIES/jdbc/mysql-connector-java-5.1.14/src/com"/>
+	<classpathentry kind="var" path="LIBRARIES/commons-collections-3.2.1/commons-collections-3.2.1.jar" sourcepath="/LIBRARIES/commons-collections-3.2.1/commons-collections-3.2.1-sources.jar"/>
+	<classpathentry kind="var" path="LIBRARIES/slf4j-1.5.6/slf4j-log4j12-1.5.6.jar" sourcepath="/LIBRARIES/slf4j-1.5.6/slf4j-log4j12-1.5.6-sources.jar"/>
+	<classpathentry kind="var" path="LIBRARIES/javassist-3.11.0.GA/javassist-3.11.0.GA.jar" sourcepath="/LIBRARIES/javassist-3.11.0.GA/javassist-3.11.0.GA-sources.jar"/>
+	<classpathentry kind="var" path="LIBRARIES/hibernate-distribution-3.6.0.Final/lib/required/jta-1.1.jar"/>
+	<classpathentry kind="var" path="LIBRARIES/antlr-2.7.6/antlr-2.7.6.jar" sourcepath="/LIBRARIES/antlr-2.7.6/antlr-2.7.6-sources.jar"/>
+	<classpathentry kind="var" path="LIBRARIES/hibernate-annotations-3.4.0.GA/hibernate-annotations.jar" sourcepath="/LIBRARIES/hibernate-annotations-3.4.0.GA/src/org"/>
+	<classpathentry kind="lib" path="E:/libraries/java/commons-logging-1.1.1/commons-logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="E:/libraries/java/apache-log4j-1.2.15/log4j-1.2.15.jar"/>
+	<classpathentry kind="output" path="target/classes"/>
+</classpath>

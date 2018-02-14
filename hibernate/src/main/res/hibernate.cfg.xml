@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+          "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+          "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+
+	<session-factory>
+		<property name="connection.url">
+			jdbc:mysql://localhost/hibernate?Unicode=true&amp;characterEncoding=UTF-8 </property>
+		<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+		<property name="connection.username">root</property>
+		<property name="connection.password">1</property>
+		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="show_sql">true</property>
+		<property name="format_sql">true</property>
+
+		<mapping
+			class="net.jazgung.hibernate.inheritance.single_table.SingleTableItem" />
+		<mapping
+			class="net.jazgung.hibernate.inheritance.single_table.SingleTableBook" />
+		<mapping
+			class="net.jazgung.hibernate.inheritance.single_table.SingleTableItBook" />
+		<mapping
+			class="net.jazgung.hibernate.inheritance.single_table.SingleTableCellPhone" />
+		<mapping
+			class="net.jazgung.hibernate.inheritance.single_table.SingleTableIPhone" />
+		<mapping
+			class="net.jazgung.hibernate.inheritance.single_table.SingleTableAppliance" />
+		<mapping
+			class="net.jazgung.hibernate.inheritance.single_table.SingleTableTelevision" />
+		<mapping
+			class="net.jazgung.hibernate.inheritance.single_table.SingleTableTool" />
+		<mapping
+			class="net.jazgung.hibernate.inheritance.single_table.SingleTableScrewDriver" />
+
+		<mapping class="net.jazgung.hibernate.inheritance.joined.JoinedItem" />
+		<mapping class="net.jazgung.hibernate.inheritance.joined.JoinedBook" />
+		<mapping class="net.jazgung.hibernate.inheritance.joined.JoinedItBook" />
+		<mapping class="net.jazgung.hibernate.inheritance.joined.JoinedCellPhone" />
+		<mapping class="net.jazgung.hibernate.inheritance.joined.JoinedIPhone" />
+		<mapping class="net.jazgung.hibernate.inheritance.joined.JoinedAppliance" />
+		<mapping class="net.jazgung.hibernate.inheritance.joined.JoinedTelevision" />
+		<mapping class="net.jazgung.hibernate.inheritance.joined.JoinedTool" />
+		<mapping class="net.jazgung.hibernate.inheritance.joined.JoinedScrewDriver" />
+
+		<mapping
+			class="net.jazgung.hibernate.inheritance.table_per_class.TablePerClassItem" />
+		<mapping
+			class="net.jazgung.hibernate.inheritance.table_per_class.TablePerClassBook" />
+		<mapping
+			class="net.jazgung.hibernate.inheritance.table_per_class.TablePerClassItBook" />
+		<mapping
+			class="net.jazgung.hibernate.inheritance.table_per_class.TablePerClassCellPhone" />
+		<mapping
+			class="net.jazgung.hibernate.inheritance.table_per_class.TablePerClassIPhone" />
+		<mapping
+			class="net.jazgung.hibernate.inheritance.table_per_class.TablePerClassAppliance" />
+		<mapping
+			class="net.jazgung.hibernate.inheritance.table_per_class.TablePerClassTelevision" />
+		<mapping
+			class="net.jazgung.hibernate.inheritance.table_per_class.TablePerClassTool" />
+		<mapping
+			class="net.jazgung.hibernate.inheritance.table_per_class.TablePerClassScrewDriver" />
+
+		<mapping class="net.jazgung.hibernate.user_type.enum_type.Person" />
+		<mapping class="net.jazgung.hibernate.user_type.class_enum_type.Person" />
+		<mapping class="net.jazgung.hibernate.user_type.class_enum_type.LocalPerson" />
+
+		<mapping
+			class="net.jazgung.hibernate.association.inheritance.AssociationWithInheritance" />
+
+		<mapping class="net.jazgung.hibernate.performance.fetch.Person" />
+		<mapping class="net.jazgung.hibernate.performance.fetch.Car" />
+		<mapping
+			class="net.jazgung.hibernate.performance.fetch.ToOneDefaultFetchCar" />
+		<mapping class="net.jazgung.hibernate.performance.fetch.ToOneJoinFetchCar" />
+		<mapping class="net.jazgung.hibernate.performance.fetch.ToOneSelectFetchCar" />
+
+		<mapping class="net.jazgung.hibernate.performance.fetch.Brand" />
+
+		<mapping class="net.jazgung.hibernate.performance.lazy.Person" />
+		<mapping class="net.jazgung.hibernate.performance.lazy.Car" />
+		<mapping
+			class="net.jazgung.hibernate.performance.lazy.MonodirectionalToOneDefaultLazyCar" />
+		<mapping
+			class="net.jazgung.hibernate.performance.lazy.MonodirectionalToOneFalseLazyCar" />
+		<mapping
+			class="net.jazgung.hibernate.performance.lazy.MonodirectionalToOneProxyCar" />
+		<mapping
+			class="net.jazgung.hibernate.performance.lazy.MonodirectionalToOneNoProxyCar" />
+		<mapping
+			class="net.jazgung.hibernate.performance.lazy.BidirectionalToOneDefaultLazyCar" />
+		<mapping
+			class="net.jazgung.hibernate.performance.lazy.BidirectionalToOneFalseLazyCar" />
+		<mapping
+			class="net.jazgung.hibernate.performance.lazy.BidirectionalToOneNoProxyCar" />
+		<mapping
+			class="net.jazgung.hibernate.performance.lazy.BidirectionalToOneProxyCar" />
+
+		<mapping class="net.jazgung.hibernate.qbc.Room" />
+		<mapping class="net.jazgung.hibernate.qbc.Person" />
+		<mapping class="net.jazgung.hibernate.qbc.House" />
+
+		<mapping class="net.jazgung.hibernate.association.normal.Person" />
+		<mapping class="net.jazgung.hibernate.association.normal.House" />
+
+		<mapping class="net.jazgung.hibernate.association.weak.Person" />
+		<mapping class="net.jazgung.hibernate.association.weak.House" />
+
+		<mapping class="net.jazgung.hibernate.session.Person" />
+
+		<mapping class="net.jazgung.hibernate.query.Person" />
+	</session-factory>
+
+</hibernate-configuration>
