@@ -1,11 +1,12 @@
 package net.jazgung.hibernate.qbc;
 
-import net.jazgung.hibernate.GenericTest;
-
 import org.hibernate.Criteria;
+import org.hibernate.criterion.Order;
 import org.hibernate.criterion.Property;
 import org.hibernate.criterion.Restrictions;
 import org.junit.Test;
+
+import net.jazgung.hibernate.GenericTest;
 
 public class QbcTest extends GenericTest {
 
@@ -43,5 +44,31 @@ public class QbcTest extends GenericTest {
 		criteria.list();
 
 		printCutOffRule("end testProperty");
+	}
+
+	@Test
+	public void testOrder() {
+		printCutOffRule("begin testOrder");
+
+		Criteria criteria = session.createCriteria(Person.class);
+		criteria.createCriteria("house").addOrder(Order.asc("area"));
+		criteria.createAlias("house.rooms", "rooms").addOrder(Order.asc("rooms.name"));
+		criteria.list();
+
+		printCutOffRule("end testOrder");
+	}
+
+	@Test
+	public void testCreateCriteriaAndAlias() {
+		printCutOffRule("begin testCreateCriteriaAndAlias");
+
+		Criteria rootCriteria = session.createCriteria(Person.class);
+		Criteria houseCriteria = rootCriteria.createCriteria("house");
+		Criteria houseAlias = rootCriteria.createAlias("house", "house");
+
+		System.out.println("rootCriteria == houseCriteria: " + (rootCriteria == houseCriteria));// createCriteria返回的是当前对象
+		System.out.println("rootCriteria == houseAlias: " + (rootCriteria == houseAlias));// createAlias返回的是被调用对象
+
+		printCutOffRule("end testCreateCriteriaAndAlias");
 	}
 }
