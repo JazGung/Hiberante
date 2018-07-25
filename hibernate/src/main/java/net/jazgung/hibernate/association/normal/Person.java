@@ -12,7 +12,7 @@ import javax.persistence.Table;
 
 import net.jazgung.hibernate.AbstractEntity;
 
-@Entity(name = "association_normal_Person")
+@Entity(name = "association_normal_person")
 @Table(name = "association_normal_person")
 public class Person extends AbstractEntity {
 
@@ -52,7 +52,7 @@ public class Person extends AbstractEntity {
 		this.age = age;
 	}
 
-	@OneToMany(mappedBy = "tenements")
+	@OneToMany(mappedBy = "owner")
 	public Set<House> getHeldHoses() {
 		return heldHoses;
 	}
